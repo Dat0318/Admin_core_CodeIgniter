@@ -1,8 +1,16 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class Dashboard extends CI_Controller
+class Dashboard extends MY_Templates
 {
+
+
+	public function __construct()
+	{
+		parent::__construct();
+		//Do your magic here
+		$this->load->helper('url');
+	}
 
 	/**
 	 * Index Page for this controller.
@@ -21,6 +29,6 @@ class Dashboard extends CI_Controller
 	 */
 	public function index()
 	{
-		$this->load->view('admin/dashboard');
+		$this->template('element/body', [], false);
 	}
 }
