@@ -9,7 +9,6 @@ class Dashboard extends MY_Templates
 	{
 		parent::__construct();
 		//Do your magic here
-		$this->load->helper('url');
 	}
 
 	/**

@@ -24,22 +24,13 @@ class MY_Templates extends MY_Common
 		//Do your magic here
 	}
 
-	public function template($template_name, $vars = array(), $return = FALSE)
+	public function template($template_name, $vars = array())
 	{
-		if ($return) :
-			$content = $this->load->view('templates/header', $vars, $return);
-			$content = $this->load->view('templates/menu', $vars, $return);
-			$content .= $this->load->view($template_name, $vars, $return);
-			$content .= $this->load->view('templates/sidebar', $vars, $return);
-			$content .= $this->load->view('templates/footer', $vars, $return);
 
-			return $content;
-		else :
-			$this->load->view('templates/header', $vars);
-			$this->load->view('templates/menu', $vars);
-			$this->load->view($template_name, $vars);
-			$this->load->view('templates/sidebar', $vars);
-			$this->load->view('templates/footer', $vars);
-		endif;
+		$this->load->view('templates/header', $vars);
+		$this->load->view('templates/menu', $vars);
+		$this->load->view($template_name, $vars);
+		$this->load->view('templates/sidebar', $vars);
+		$this->load->view('templates/footer', $vars);
 	}
 }
