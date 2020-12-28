@@ -1,15 +1,11 @@
 <?php
-
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class Home extends CI_Controller
+class Carrer extends MY_Tables
 {
 
 	public function index()
 	{
-
-		$this->load->view('home');
+		$this->template('element/tables');
 	}
 }
-        
-    /* End of file  Home.php */
