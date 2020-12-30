@@ -3,7 +3,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 class Event extends Tables_Controller
 {
-	protected $title = "Admin Table panel";
+	protected $title = "Admin Table panel - Events table";
 
 	public function __construct()
 	{
@@ -13,6 +13,6 @@ class Event extends Tables_Controller
 
 	public function index()
 	{
-		$this->template('element/tables', $this->title);
+		$this->template('pages/tables', $this->title);
 	}
 }

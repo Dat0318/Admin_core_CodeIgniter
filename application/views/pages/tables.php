@@ -1,20 +1,4 @@
   <div class="content-wrapper">
-    <!-- <section class="content-header">
-      <div class="container-fluid">
-        <div class="row mb-2">
-          <div class="col-sm-6">
-            <h1>DataTables</h1>
-          </div>
-          <div class="col-sm-6">
-            <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">DataTables</li>
-            </ol>
-          </div>
-        </div>
-      </div>
-    </section> -->
-
     <!-- Main content -->
     <section class="content">
       <div class="container-fluid">
@@ -120,15 +104,6 @@
                             <td>A</td>
                           </tr>
                         </tbody>
-                        <tfoot>
-                          <tr>
-                            <th rowspan="1" colspan="1">Rendering engine</th>
-                            <th rowspan="1" colspan="1">Browser</th>
-                            <th rowspan="1" colspan="1">Platform(s)</th>
-                            <th rowspan="1" colspan="1">Engine version</th>
-                            <th rowspan="1" colspan="1">CSS grade</th>
-                          </tr>
-                        </tfoot>
                       </table>
                     </div>
                   </div>

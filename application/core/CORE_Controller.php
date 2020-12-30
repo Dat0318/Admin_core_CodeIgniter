@@ -18,10 +18,11 @@ class CORE_Controller extends CI_Controller
 class Templates_Controller extends CORE_Controller
 {
 	protected $css = "";
-	protected $js = "demo.js,pages/dashboard3.js";
+	protected $js = "demo.js,pages/dashboard2.js,pages/dashboard3.js";
 	protected $plugins_css = "";
 	protected $plugins_js = "chart.js/Chart.min.js";
 	protected $array = array();
+	protected $script = '';
 
 	public function __construct()
 	{
@@ -30,6 +31,7 @@ class Templates_Controller extends CORE_Controller
 		$this->array["js"] =  $this->js;
 		$this->array["plugins_css"] =  $this->plugins_css;
 		$this->array["plugins_js"] =  $this->plugins_js;
+		$this->array["script"] =  $this->script;
 	}
 
 	public function template($template_name, $title)
@@ -86,5 +88,33 @@ class Tables_Controller extends CORE_Controller
 		$this->load->view($template_name, $this->array);
 		$this->load->view('templates/sidebar', $this->array);
 		$this->load->view('templates/footer', $this->array);
+	}
+}
+class Auth_Controller extends CORE_Controller
+{
+	protected $css = "";
+	protected $js = "";
+	protected $plugins_css = "";
+	protected $plugins_js = "";
+	protected $array = array();
+	protected $script = '';
+
+	public function __construct()
+	{
+		parent::__construct();
+		$this->array["css"] =  $this->css;
+		$this->array["js"] =  $this->js;
+		$this->array["plugins_css"] =  $this->plugins_css;
+		$this->array["plugins_js"] =  $this->plugins_js;
+		$this->array["script"] =  $this->script;
+	}
+
+	public function template($template_name, $title)
+	{
+		$this->array["title"] =  $title;
+
+		$this->load->view('templates/auth_header', $this->array);
+		$this->load->view($template_name, $this->array);
+		$this->load->view('templates/auth_footer', $this->array);
 	}
 }

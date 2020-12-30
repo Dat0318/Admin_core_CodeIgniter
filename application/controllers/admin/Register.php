@@ -1,9 +1,9 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class Dashboard extends Templates_Controller
+class Register extends Auth_Controller
 {
-	protected $title = "Admin Control panel - Dashboard";
+	protected $title = "Admin Table panel - Register";
 
 	public function __construct()
 	{
@@ -13,6 +13,6 @@ class Dashboard extends Templates_Controller
 
 	public function index()
 	{
-		$this->template('pages/dashboard', $this->title);
+		$this->template('pages/register', $this->title);
 	}
 }
